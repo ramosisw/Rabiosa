@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.MySQLDialect
+		</property>
+		<property name="hibernate.connection.driver_class">
+			com.mysql.jdbc.Driver
+		</property>
+		<property name="hibernate.connection.url">
+			jdbc:mysql://localhost/dbRabiosa
+		</property>
+		<property name="hibernate.connection.username">
+			root
+		</property>
+		<property name="hibernate.connection.password">
+			root
+		</property>
+		<!-- Crear la DB a partir de los mappings  -->
+        <!-- Solo Ejecutar 1 sola vez -->
+        <property name="hbm2ddl.auto">create</property>
+		<mapping class="mx.itson.rabiosa.nucleo.entidades.Cargo" />
+		<mapping class="mx.itson.rabiosa.nucleo.entidades.Celular" />
+		<mapping class="mx.itson.rabiosa.nucleo.entidades.Cliente" />
+		<mapping class="mx.itson.rabiosa.nucleo.entidades.Colonia" />
+		<mapping class="mx.itson.rabiosa.nucleo.entidades.Direccion" />
+		<mapping class="mx.itson.rabiosa.nucleo.entidades.Empresa" />
+		<mapping class="mx.itson.rabiosa.nucleo.entidades.Estado" />
+		<mapping class="mx.itson.rabiosa.nucleo.entidades.EstadoCuenta" />
+		<mapping class="mx.itson.rabiosa.nucleo.entidades.LDI" />
+		<mapping class="mx.itson.rabiosa.nucleo.entidades.LDN" />
+		<mapping class="mx.itson.rabiosa.nucleo.entidades.Llamada" />
+		<mapping class="mx.itson.rabiosa.nucleo.entidades.Local" />
+		<mapping class="mx.itson.rabiosa.nucleo.entidades.Municipio" />
+		<mapping class="mx.itson.rabiosa.nucleo.entidades.Paquete" />
+		<mapping class="mx.itson.rabiosa.nucleo.entidades.Poblacion" />
+		<mapping class="mx.itson.rabiosa.nucleo.entidades.Tarifa" />
+
+
+	</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="miRepo" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="230f111e-b655-468e-ba2b-2c9f7eecfb7d">
+	<parameter name="pm_mio" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="210" y="10" width="70" height="20" uuid="69419c31-50d4-45a0-a59f-cdd29e078299"/>
+				<text><![CDATA[Tituloo]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="348" y="38" width="70" height="30" uuid="95bf59d9-265c-4274-8cee-647684545db7"/>
+				<textFieldExpression><![CDATA[$P{pm_mio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="484" y="0" width="70" height="30" uuid="c3d28855-c180-4ca4-8b97-2b028ee14ed5"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<break>
+				<reportElement x="0" y="7" width="100" height="1" uuid="70b7557d-3bab-48bb-aacf-5b0fef52f753"/>
+			</break>
+			<staticText>
+				<reportElement stretchType="RelativeToBandHeight" x="180" y="41" width="70" height="20" uuid="166e32b8-c349-4046-b161-4146b0adf223"/>
+				<text><![CDATA[Tituloo]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="318" y="69" width="70" height="30" uuid="ae48f39e-442c-44e0-9eff-a563dc970151"/>
+				<textFieldExpression><![CDATA[$P{pm_mio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

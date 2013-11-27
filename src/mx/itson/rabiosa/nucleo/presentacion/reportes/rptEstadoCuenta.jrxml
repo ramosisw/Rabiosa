@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fb9b18c7-f581-4b39-bcd7-84658be7efba">
+	<parameter name="pm_folio" class="java.lang.String"/>
+	<parameter name="pm_TotalAPagar" class="java.lang.String"/>
+	<parameter name="pm_PagarAntesDe" class="java.lang.String"/>
+	<parameter name="pm_MesFacturacion" class="java.lang.String"/>
+	<parameter name="pm_Telefono" class="java.lang.String"/>
+	<parameter name="pm_FacturaNo" class="java.lang.String"/>
+	<parameter name="pm_NombreCliente" class="java.lang.String"/>
+	<parameter name="pm_Calle" class="java.lang.String"/>
+	<parameter name="pm_NumeroDireccion" class="java.lang.String"/>
+	<parameter name="pm_Colonia" class="java.lang.String"/>
+	<parameter name="pm_Ciudad" class="java.lang.String"/>
+	<parameter name="pm_Estado" class="java.lang.String"/>
+	<parameter name="pm_CodigoPostal" class="java.lang.String"/>
+	<parameter name="pm_Rfc" class="java.lang.String"/>
+	<parameter name="pm_SaldoAnterior" class="java.lang.String"/>
+	<parameter name="pm_suPagoGracias" class="java.lang.String"/>
+	<parameter name="pm_Saldo" class="java.lang.String"/>
+	<parameter name="pm_CargoMesSubtotal" class="java.lang.String"/>
+	<parameter name="pm_Iva" class="java.lang.String"/>
+	<parameter name="pm_Subtotal" class="java.lang.String"/>
+	<parameter name="pm_TotalLetra" class="java.lang.String"/>
+	<parameter name="pm_CargoRedondeo" class="java.lang.String"/>
+	<parameter name="pm_CreditoRedondeo" class="java.lang.String"/>
+	<parameter name="pm_IEPS" class="java.lang.String"/>
+	<parameter name="pm_PlanesPaquetes" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="llamadasCelular" class="java.util.Collection"/>
+	<background>
+		<band height="220" splitType="Stretch">
+			<subreport>
+				<reportElement x="178" y="20" width="200" height="200" uuid="6f5fdf82-7865-4f68-8462-111c339c86f0"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{llamadasCelular})]]></dataSourceExpression>
+				<subreportExpression><![CDATA["src/mx/itson/rabiosa/nucleo/presentacion/reportes/subrptLlamadasCelular.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<detail>
+		<band height="297" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<property name="local_mesure_unitheight" value="pixel"/>
+			<image>
+				<reportElement x="10" y="30" width="174" height="52" uuid="30b9ea03-6cea-412f-8e47-08d1acbe9056"/>
+				<imageExpression><![CDATA["../../../../../../../assets/imagenes/telmex_logo.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="10" y="70" width="190" height="20" uuid="878d0426-739f-4201-8fbb-d1fe8bd61c6c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TELEFONOS DE MEXICO SA. de S.V]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="59" width="40" height="20" uuid="7d9aad91-939c-4578-88d7-6709dc36f90f">
+					<property name="local_mesure_unitwidth" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Trebuchet MS" size="12"/>
+				</textElement>
+				<text><![CDATA[Folio:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="314" y="79" width="80" height="20" forecolor="#0000FF" uuid="41759596-34ec-4347-b0d4-d35197a25a2c"/>
+				<textElement>
+					<font fontName="Trebuchet MS" size="12"/>
+				</textElement>
+				<text><![CDATA[Total a pagar:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="310" y="79" width="238" height="2" uuid="b988d0b4-624d-4c1f-86bc-f0e5ed7900dd">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="409" y="30" width="60" height="20" uuid="39f8b91b-bdc6-4832-8722-8c1eaf7c310b"/>
+				<textElement>
+					<font fontName="Trebuchet MS" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Télefono:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="314" y="101" width="90" height="20" forecolor="#0000FF" uuid="9ebdbd00-b404-4f33-83c8-b2a262e65a42"/>
+				<textElement>
+					<font fontName="Trebuchet MS" size="12"/>
+				</textElement>
+				<text><![CDATA[Pagar antes de:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="368" y="30" width="180" height="1" uuid="8c6638d1-f6fd-40e4-ae50-feb45a8b10b1">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="310" y="120" width="238" height="2" uuid="4101112d-885f-4e6a-8d61-87d6eeafc908">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="310" y="100" width="238" height="2" uuid="6ead18c7-d115-4ad9-8e24-4e5bb0d92241">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="314" y="120" width="120" height="20" uuid="218b5a42-761e-47f2-9859-2c265bf71141"/>
+				<text><![CDATA[Mes de Facturación:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="314" y="140" width="234" height="2" uuid="c04ecd99-3ed6-4e17-910e-09739d4cd7f5">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="314" y="141" width="70" height="20" uuid="8a0316f6-93b4-44e2-965f-64bdd4050546"/>
+				<text><![CDATA[Télefono:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="314" y="160" width="234" height="2" uuid="fe15f3ba-bf4a-4396-b341-25735995fb3f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="314" y="160" width="90" height="20" uuid="7ade21f5-dbb4-478a-9205-7442fa05ed60"/>
+				<text><![CDATA[Factura No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="80" width="168" height="20" uuid="62e32e34-c388-461d-a220-610c82c3d456"/>
+				<text><![CDATA[Calle 21, S/N Colonia Centro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="90" width="180" height="20" uuid="814e9fa2-e016-455f-b181-2f527ded5130"/>
+				<text><![CDATA[C.P 85400 Guaymas Son.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="190" width="179" height="49" uuid="a1714221-218e-49d3-b95a-a7792ccec4ec"/>
+				<textElement textAlignment="Left">
+					<font isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Tu estado de cuenta puede ser
+pagado en cualquier centro de cobro
+indicado al reverso de esta factura
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="404" y="65" width="121" height="14" uuid="3a097b07-933f-4d13-b53c-dea5a016ff3c"/>
+				<textFieldExpression><![CDATA[$P{pm_folio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="404" y="103" width="121" height="16" uuid="96bb93f1-8bb6-4a02-b603-eb6dacee4d74"/>
+				<textFieldExpression><![CDATA[$P{pm_PagarAntesDe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="403" y="120" width="122" height="20" uuid="935e5372-e108-47eb-9d56-e715d3e7ce80"/>
+				<textFieldExpression><![CDATA[$P{pm_MesFacturacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="404" y="160" width="121" height="20" uuid="7c3894c6-fba3-4e36-ba5d-bbe50daf09cc"/>
+				<textFieldExpression><![CDATA[$P{pm_FacturaNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="160" width="70" height="20" uuid="fd8e9add-2808-4990-9470-392dba700598"/>
+				<textFieldExpression><![CDATA[$P{pm_Calle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="88" y="160" width="130" height="20" uuid="b6968353-b752-470c-83e3-3a0294ce0436"/>
+				<textFieldExpression><![CDATA[$P{pm_NumeroDireccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="10" y="180" width="200" height="18" uuid="9863f6d6-e2d6-4f3a-82bb-4bb10a0e5238"/>
+				<textFieldExpression><![CDATA[$P{pm_Colonia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="7" y="203" width="100" height="22" uuid="5a1b0641-bb84-4e9f-85d2-daa37b37bf49"/>
+				<textFieldExpression><![CDATA[$P{pm_Ciudad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="204" width="100" height="21" uuid="afb2a01b-7267-4d57-8652-ae9d807e981c"/>
+				<textFieldExpression><![CDATA[$P{pm_Estado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="6" y="230" width="199" height="20" uuid="62fae837-8a98-48a6-92fc-7a77ae4f7e4f"/>
+				<textFieldExpression><![CDATA[$P{pm_CodigoPostal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="7" y="267" width="198" height="23" uuid="b93c9120-2221-41e8-afb1-3e9da6aa6a70"/>
+				<textFieldExpression><![CDATA[$P{pm_Rfc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="469" y="30" width="86" height="18" uuid="a65e1d4b-67a5-4663-adb4-7e23de37ef0b"/>
+				<textFieldExpression><![CDATA[$P{pm_Telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="403" y="145" width="119" height="17" uuid="5a7c037d-f9cf-45d2-a60a-e55d3b9ed694"/>
+				<textFieldExpression><![CDATA[$P{pm_Telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="0" width="93" height="30" uuid="46447053-b39d-4036-92d3-97e616c58604"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="146" splitType="Stretch">
+			<image>
+				<reportElement x="60" y="-7" width="460" height="125" uuid="d483a4fb-367a-4c3a-9d61-1ffd43339a91"/>
+				<imageExpression><![CDATA["../../../../../../../assets/imagenes/Anuncio.PNG"]]></imageExpression>
+			</image>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="250" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="40" y="10" width="230" height="20" forecolor="#FFFFFF" backcolor="#0000FF" uuid="b460beb5-5a8b-4df5-a242-ed9c537ecbf0"/>
+				<textElement>
+					<font fontName="Trebuchet MS" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estado de Cuenta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="310" y="10" width="230" height="20" forecolor="#FFFFFF" backcolor="#0000FF" uuid="c4e21907-af9b-4e37-8f1f-291ef6306fb3"/>
+				<textElement>
+					<font fontName="Trebuchet MS" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cargos del Mes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="30" width="70" height="20" uuid="d98f7cca-9e5d-4fcd-ac1e-b069048487ba"/>
+				<textElement>
+					<font fontName="Trebuchet MS"/>
+				</textElement>
+				<text><![CDATA[Saldo Anterior:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="50" width="100" height="20" uuid="be1fd644-930f-44fc-8fbb-362b36ae01a8"/>
+				<textElement>
+					<font fontName="Microsoft YaHei" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Su pago Gracias:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="70" width="70" height="20" uuid="fbc58740-8428-42ad-8dd3-379883247fbe"/>
+				<text><![CDATA[Saldo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="90" width="70" height="20" uuid="7d851b88-ce7a-4a50-b18a-8e25c2804d25"/>
+				<text><![CDATA[Cargo del mes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="110" width="70" height="20" uuid="958e1a79-cb76-4f7b-b889-ead480b739dc"/>
+				<text><![CDATA[IVA 16%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="130" width="70" height="20" uuid="8d4aad0f-fbf5-4b8c-b2d2-e60d5e82b5d0"/>
+				<textElement>
+					<font fontName="Microsoft YaHei" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SubTotal:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="150" width="114" height="20" uuid="feb4ca9d-2837-48a3-b794-e0f271ffe4d4"/>
+				<text><![CDATA[Cargo por Redondeo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="170" width="133" height="20" uuid="12398111-b152-4b29-9569-1317aedc4194"/>
+				<text><![CDATA[Credito por Redondeo*]]></text>
+			</staticText>
+			<line>
+				<reportElement x="40" y="50" width="230" height="1" uuid="4e8ebfce-10b0-4467-8e85-7c5e3ee282d3">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="40" y="70" width="230" height="1" uuid="66b7ca07-20d5-4323-b28b-e6af939bb6c8">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="40" y="110" width="230" height="1" uuid="163f4fc3-4722-44bb-9742-7ed3ced38dc4">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="40" y="130" width="230" height="1" uuid="cfbc340e-e447-4e55-b8af-abdc7d3ec599">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="37" y="190" width="233" height="1" uuid="d2661d16-9e1a-4f72-8d71-7cf46649fa69">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="37" y="190" width="70" height="20" uuid="5bf64b1f-f49c-42f0-babc-94bc413ff897"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total a pagar:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="230" width="250" height="20" uuid="eb188a6b-4d4b-472f-8310-4da37f547412"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[*La diferencia de centavos aplicara es su próximo estado de cuenta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="30" width="130" height="20" uuid="283148da-2635-4456-b9dc-bae1eaaae98c"/>
+				<text><![CDATA[Planes y Paquetes]]></text>
+			</staticText>
+			<line>
+				<reportElement x="310" y="50" width="230" height="1" uuid="0fdc2e35-06fe-4480-8a09-40bd8730380e">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="310" y="50" width="70" height="20" uuid="eea11f7e-e254-4be1-b44e-c573f6421959"/>
+				<text><![CDATA[IEPS 3%]]></text>
+			</staticText>
+			<line>
+				<reportElement x="310" y="70" width="230" height="1" uuid="7c17d3bc-9ab4-44f7-8810-a689a4264bef">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="310" y="70" width="70" height="20" uuid="6bcc63df-5faa-4b03-9350-2dffec1ae8a5"/>
+				<text><![CDATA[SubTotal]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="160" y="33" width="90" height="18" uuid="5746958d-51d3-4977-a586-1e79e1e644ec"/>
+				<textFieldExpression><![CDATA[$P{pm_Saldo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="51" width="118" height="18" uuid="11f2ee5d-8c2b-476b-adc8-7aed7de7570f"/>
+				<textFieldExpression><![CDATA[$P{pm_suPagoGracias}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="70" width="95" height="20" uuid="1e3be64e-84db-4cb4-857e-df328413a571"/>
+				<textFieldExpression><![CDATA[$P{pm_Saldo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="96" width="145" height="14" uuid="eb9e911a-5d4d-4e89-b2e5-23efd5319531"/>
+				<textFieldExpression><![CDATA[$P{pm_CargoMesSubtotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="110" width="98" height="17" uuid="159c818f-26f1-4ca0-948a-9a5e6247118c"/>
+				<textFieldExpression><![CDATA[$P{pm_Iva}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="132" width="109" height="17" uuid="de6fb31a-8c91-4c21-83df-580ef2afc1ee"/>
+				<textFieldExpression><![CDATA[$P{pm_Subtotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="117" width="70" height="30" uuid="a068fd0b-b0d3-4e46-931d-13f43df3670f"/>
+				<textFieldExpression><![CDATA[$P{pm_TotalAPagar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="152" y="189" width="97" height="21" uuid="ef9125cc-084b-48de-b975-c117db297c86"/>
+				<textFieldExpression><![CDATA[$P{pm_TotalAPagar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="216" width="160" height="14" uuid="fb801d87-b1c2-4a52-bc7e-229eec46b2bb"/>
+				<textFieldExpression><![CDATA[$P{pm_TotalLetra}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="149" width="121" height="21" uuid="b0186e8f-d01b-4f7a-8dad-b5108c3af9b3"/>
+				<textFieldExpression><![CDATA[$P{pm_CargoRedondeo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="169" width="133" height="22" uuid="9138f721-82d2-42ca-bc21-d5737e7cd4ce"/>
+				<textFieldExpression><![CDATA[$P{pm_CreditoRedondeo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="437" y="72" width="101" height="16" uuid="8d3767f4-7c7a-438b-86a9-452f985b8065"/>
+				<textFieldExpression><![CDATA[$P{pm_Subtotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="434" y="50" width="95" height="20" uuid="de110bac-6c4c-4df9-a2f9-ae4a72685dc2"/>
+				<textFieldExpression><![CDATA[$P{pm_IEPS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="30" width="121" height="20" uuid="d0fa45b5-6fe5-4ac0-91d6-b391fb7c2f0b"/>
+				<textFieldExpression><![CDATA[$P{pm_PlanesPaquetes}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="104" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="10" width="553" height="2" uuid="0241acf9-008d-4438-b534-e5f736b7cc3b">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<image>
+				<reportElement x="429" y="30" width="133" height="41" uuid="82a9e3d6-1915-4550-9269-767c44b06387"/>
+				<imageExpression><![CDATA["../../../../../../../assets/imagenes/Infinitum.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="30" y="41" width="390" height="1" uuid="a07a5601-838c-447f-bbeb-562be82eea5d">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="30" y="40" width="70" height="20" uuid="a9501ebb-1ba6-445d-a3a9-3c2c8f4f7adf"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Télefono:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="38" width="91" height="20" uuid="ed4f6acb-16bf-4fb9-aaee-6bc23bdb9a46"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total a pagar:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="30" y="61" width="390" height="1" uuid="920b6c9b-3e73-4c7a-a313-d8d59468577f">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="30" y="62" width="100" height="20" uuid="cb75103d-a164-4b75-8fde-9eab7a900049"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mes de Facturación:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="215" y="62" width="100" height="20" uuid="240cb4b5-8e1d-4f39-84bc-2f1e29245c48"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pagar antes de:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="60" y="24" width="280" height="17" uuid="8a1377e8-59f1-407c-b6dc-84271faf91dc"/>
+				<textFieldExpression><![CDATA[$P{pm_NombreCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="43" width="111" height="19" uuid="c3ca6540-1c3d-4956-a935-fde0ac82b194"/>
+				<textFieldExpression><![CDATA[$P{pm_Telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="40" width="110" height="21" uuid="9630e16c-af67-4fd7-ba97-46bf3bdeaf27"/>
+				<textFieldExpression><![CDATA[$P{pm_TotalAPagar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="317" y="58" width="120" height="16" uuid="12fca887-24ae-4c67-bafc-63a0a9947598"/>
+				<textFieldExpression><![CDATA[$P{pm_PagarAntesDe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="64" width="112" height="18" uuid="930335a8-b972-48f1-b234-caa1f9ca0148"/>
+				<textFieldExpression><![CDATA[$P{pm_MesFacturacion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

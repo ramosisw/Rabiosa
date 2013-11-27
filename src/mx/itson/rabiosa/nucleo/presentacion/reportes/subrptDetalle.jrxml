@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subrptDetalle" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0ada80e6-1db0-4ffc-a19d-26d0bc5ed116">
+	<property name="ireport.callouts" value="callouts.1.fg=0,0,0\n callouts.1.bg=255,255,0\n "/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="65" splitType="Stretch">
+			<staticText>
+				<reportElement x="420" y="30" width="70" height="20" uuid="d04e7c42-40b5-4b45-aa2d-1fe4c67c91c1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+			<line>
+				<reportElement x="320" y="30" width="210" height="1" uuid="e67fce2a-509e-44af-a6f9-fe3eba5be0e1">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<textField>
+				<reportElement x="460" y="0" width="70" height="30" uuid="b292c409-fa7d-474c-8e94-a961e13d1dcf"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="154" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="20" width="30" height="20" uuid="796965ba-60bb-4307-8c47-bb0f4114e38b"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="20" width="20" height="20" uuid="79e6dc8c-476b-4ad9-b48b-3b79029074e4"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="20" width="70" height="20" uuid="4a5d8ce4-6f93-42c1-8cb3-ee197a17f2a5"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lada (Teléfono)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="20" width="60" height="20" uuid="fc2942eb-d618-43c5-9178-e4011839c843"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Minutos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="20" width="50" height="20" uuid="39139ec7-c557-4dde-9eb9-a3cc4217a0bc"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Importe]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-8" y="32" width="505" height="2" uuid="7605227a-e95a-498b-9f6f-28f00baf7903">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<summary>
+		<band height="130" splitType="Stretch">
+			<image>
+				<reportElement x="50" y="0" width="440" height="119" uuid="6bb30b07-a8ca-4a3a-8795-05f856811205"/>
+				<imageExpression><![CDATA["../../../../../../../assets/imagenes/AnuncioTablet.png"]]></imageExpression>
+			</image>
+		</band>
+	</summary>
+</jasperReport>

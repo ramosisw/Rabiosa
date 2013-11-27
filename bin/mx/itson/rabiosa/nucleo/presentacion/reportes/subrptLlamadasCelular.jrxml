@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subrptLlamadasCelular" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cf3e1994-e2ac-482e-80e4-49ce3de052b7">
+	<parameter name="pm_Telefono" class="java.lang.String"/>
+	<parameter name="pm_DescripcionPaquete" class="java.lang.String"/>
+	<parameter name="pm_PlanesPaquetes" class="java.lang.String"/>
+	<parameter name="pm_Locales" class="java.lang.String"/>
+	<parameter name="pm_minLDN" class="java.lang.String"/>
+	<parameter name="pm_minCel" class="java.lang.String"/>
+	<parameter name="pm_RealizadasLocales" class="java.lang.String"/>
+	<parameter name="pm_PagarLocales" class="java.lang.String"/>
+	<parameter name="pm_TarifaServicioLocal" class="java.lang.String"/>
+	<parameter name="pm_TotalServicioLocal" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="57" splitType="Stretch">
+			<line>
+				<reportElement x="320" y="30" width="210" height="1" uuid="36b8491d-2782-416a-bb8a-dd9e4f3e5673">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="390" y="31" width="70" height="20" uuid="e5411b3e-b813-4449-afbd-5ff4eda8124b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Télefono:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="449" y="30" width="93" height="19" uuid="8cebb141-33b9-4f2c-932b-7c25514d35e7"/>
+				<textFieldExpression><![CDATA[$P{pm_Telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="457" y="1" width="70" height="30" uuid="6381db9e-6e1d-48ed-b9a4-9093ce46720e"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="432" splitType="Stretch">
+			<staticText>
+				<reportElement x="50" y="0" width="125" height="20" uuid="c71ae07c-56f9-4945-9dab-5eeb33120af3"/>
+				<textElement>
+					<font fontName="Tw Cen MT Condensed" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Planes y paquetes]]></text>
+			</staticText>
+			<line>
+				<reportElement x="50" y="20" width="505" height="1" uuid="1ce1992d-db87-4298-811d-04bd17623a78">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<image>
+				<reportElement x="50" y="20" width="50" height="40" uuid="4fa01389-3e1c-466f-8ef1-4aa5e1c2ac9c"/>
+				<imageExpression><![CDATA["../../../../../../../assets/imagenes/Paquetes.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="110" y="22" width="70" height="20" uuid="ea935000-19fd-4863-a008-d6245b319d98"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="20" width="70" height="20" uuid="6493984b-9311-416e-bec0-ea1cdd8836fa"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Importe]]></text>
+			</staticText>
+			<line>
+				<reportElement x="109" y="30" width="445" height="1" uuid="caa8d66a-f4ec-4310-8809-fdc5572f1524">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+			</line>
+			<line>
+				<reportElement x="109" y="50" width="445" height="1" uuid="1b465d17-a56e-4c8b-b911-17130806d339">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="382" y="50" width="70" height="20" uuid="0c12a270-6fc8-461a-8452-3cbe4839589f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="71" y="73" width="60" height="20" uuid="a8dac20b-62d6-444f-9ebf-4b7a48d2ab4f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[*Inlcuye:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="112" width="125" height="20" uuid="2b99a9bd-0690-46e5-81e3-56d95678161d"/>
+				<textElement>
+					<font fontName="Tw Cen MT Condensed" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Servicio Local]]></text>
+			</staticText>
+			<line>
+				<reportElement x="49" y="132" width="505" height="1" uuid="ad601be2-dc7e-47aa-b3be-c4968221035d">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<image>
+				<reportElement x="49" y="140" width="61" height="50" uuid="7f493f99-80d7-4406-a583-d8aac6053f02"/>
+				<imageExpression><![CDATA["../../../../../../../assets/imagenes/Llamadas.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="49" y="200" width="70" height="20" uuid="fa834f62-aaf8-4ae4-bc10-79fcc994e328"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Llamadas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="340" y="200" width="50" height="20" uuid="0a80d780-da1c-4707-9448-d28e7cb8ec59"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="200" width="70" height="20" uuid="91cd183a-14f2-4fc2-8b6e-4ae00672882a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Periodo]]></text>
+			</staticText>
+			<line>
+				<reportElement x="40" y="220" width="505" height="1" uuid="7b00e939-4ccb-421f-a834-1407a9e47a5c">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="43" y="220" width="116" height="20" uuid="10e0b9eb-6cac-47e5-b073-df4852651429"/>
+				<text><![CDATA[Llamadas Realizadas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="240" width="190" height="20" uuid="83863955-b497-48a0-b4e7-38f035ed3f22"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<text><![CDATA[Llamadas incluidas en la renta mensual]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="260" width="150" height="20" uuid="a3a45ee5-0d96-404a-a04e-15e8ff7a541d"/>
+				<text><![CDATA[Llamadas por pagar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="280" width="70" height="20" uuid="7a6cd5be-f409-449e-b7ad-0e04f8016c81"/>
+				<text><![CDATA[Tarifas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="300" width="70" height="20" uuid="4c76c5ea-c879-422e-9723-bf5e9729667a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<line>
+				<reportElement x="40" y="240" width="505" height="1" uuid="d7cf8c60-b200-4efe-a076-d27fed00382e">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="40" y="260" width="505" height="1" uuid="64b6b2a2-32b3-48a4-86b5-7509427702bc">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="40" y="280" width="505" height="1" uuid="e3be6fb2-763f-4a23-8567-181614d86262">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="39" y="300" width="505" height="1" uuid="f0006126-adb8-47c2-9c76-9a07343b580c">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="320" y="260" width="85" height="1" uuid="580ec1f1-a006-4564-8a65-0dc45518d76e">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="320" y="300" width="85" height="1" uuid="529292ef-f212-4a3f-a6e1-e24aafd24e70">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="49" y="340" width="125" height="20" uuid="8bb4dc14-48eb-4578-8ad0-dca5bab92991"/>
+				<textElement>
+					<font fontName="Tw Cen MT Condensed" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Celular]]></text>
+			</staticText>
+			<line>
+				<reportElement x="50" y="360" width="505" height="2" uuid="25932641-ff76-465a-a952-03e5c330a873">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="130" y="362" width="70" height="20" uuid="7910b93b-4b7d-4481-956b-da685c749233"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripción]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="362" width="70" height="20" uuid="5a44d851-29fa-4de5-92b9-4d7f9422f51c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Importe]]></text>
+			</staticText>
+			<image>
+				<reportElement x="54" y="362" width="50" height="50" uuid="2f9a155a-1aea-4362-8584-08943faaa671"/>
+				<imageExpression><![CDATA["../../../../../../../assets/imagenes/Celulares.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="110" y="382" width="445" height="1" uuid="ae239d4d-efb0-4ed3-9d38-482b0497cc73">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="110" y="410" width="445" height="1" uuid="2ad4e447-4a23-484c-bbd3-324088a95cd4">
+					<property name="local_mesure_unitheight" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="1.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="360" y="412" width="70" height="20" uuid="841fac6f-7d40-40fc-bc7f-7ca346d5a381"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<line>
+				<reportElement x="420" y="410" width="85" height="1" uuid="14c03699-f320-4412-994c-9ed481b0ab4c">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="109" y="31" width="273" height="19" uuid="c41c9d34-f678-49ef-b820-3c3f3074ac5e"/>
+				<textFieldExpression><![CDATA[$P{pm_DescripcionPaquete}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="52" width="126" height="17" uuid="ac3b8c3b-74b3-4e4c-a42a-05e09f763603"/>
+				<textFieldExpression><![CDATA[$P{pm_PlanesPaquetes}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="131" y="73" width="100" height="20" uuid="6d1e670e-39b7-41c5-8fd9-fa35e61bc10c"/>
+				<text><![CDATA[Renta de la linea +]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="216" y="72" width="81" height="22" uuid="0358b90f-992d-4924-b7d5-40256a0b38ed"/>
+				<textFieldExpression><![CDATA[$P{pm_Locales}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="296" y="73" width="86" height="20" uuid="72766c7d-5387-4daf-8f5f-04d35806d017"/>
+				<text><![CDATA[llamadas locales+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="380" y="73" width="89" height="15" uuid="1a5a1b08-9cd1-46ae-9773-67c0c8b90049"/>
+				<textFieldExpression><![CDATA[$P{pm_minLDN}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="460" y="73" width="70" height="20" uuid="75ed5d53-6173-439c-8384-63c344f4ca01"/>
+				<text><![CDATA[minutos LDN+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="61" y="88" width="58" height="18" uuid="321d0392-bf0a-4bd5-908b-7238c78f74a5"/>
+				<text><![CDATA[Infinitum+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="120" y="90" width="80" height="15" uuid="9ac87e2c-32d1-4113-b90f-347f4016bc06"/>
+				<textFieldExpression><![CDATA[$P{pm_minCel}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="199" y="90" width="113" height="20" uuid="cec6aa9b-9a96-464b-b651-fbbb090263ac"/>
+				<text><![CDATA[Minutos a Celular 044+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="90" width="205" height="20" uuid="12549315-fb2b-432e-b9e9-66f552ac29fa"/>
+				<text><![CDATA[Servicios Digitales y las mejores tarifas Lada]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="30" width="124" height="19" uuid="97036a7b-cb0c-46ee-9c2e-6708baade89c"/>
+				<textFieldExpression><![CDATA[$P{pm_PlanesPaquetes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="244" width="100" height="13" uuid="33bdb6ed-642b-47cf-bb2a-06028c798dcf"/>
+				<textFieldExpression><![CDATA[$P{pm_Locales}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="220" width="125" height="20" uuid="1e6f1c8e-f712-4632-aed6-a4314a89ee3f"/>
+				<textFieldExpression><![CDATA[$P{pm_RealizadasLocales}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="310" y="235" width="43" height="30" uuid="623c84f6-5912-4e40-a715-47e7311a9e3a"/>
+				<textElement>
+					<font size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="310" y="262" width="120" height="16" uuid="def025a4-b2f5-4947-af87-8b0002de1328"/>
+				<textFieldExpression><![CDATA[$P{pm_PagarLocales}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="312" y="280" width="139" height="19" uuid="cd7bc5b6-c380-4ec9-bb2c-2a39307117d0"/>
+				<textFieldExpression><![CDATA[$P{pm_TarifaServicioLocal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="311" y="301" width="125" height="19" uuid="56d98279-6ee6-4b76-b46f-482fe2bb572f"/>
+				<textFieldExpression><![CDATA[$P{pm_TotalServicioLocal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="20" width="490" height="20" uuid="3292c182-fccd-4542-b1f2-ba09748f6efd"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Este docuento es una representación impresa de un CPD. La unidad de medida para todos los conceptos facturados es: SERVICIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="30" width="534" height="20" uuid="d8578bfe-bdeb-4c88-b6de-8ae3adf5f28c"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Forma de pago: Pago en una sola exhibición. El pago de esta factura no libera al cierre de adeudos anteriore o consumos no incluidos en la misma.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="40" width="534" height="20" uuid="7fd4065d-3f25-476f-b6b4-f5045273b47f"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Con base a la Ley General de Titulos de Crédito, TELEFONS DE MEXICO S.A de C.V cobra el 20%. Por concepto de cheque Devueltos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="50" width="120" height="20" uuid="030ddc73-ef76-45bb-a560-a6f0c4de7d3a"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Metodo de pago: No identificado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="50" width="135" height="20" uuid="b6f458df-96a4-49ef-86b7-73baa341da99"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Lugar de expedición: México, D.F]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="355" y="50" width="200" height="20" uuid="d9a0f18e-379f-435b-8c82-59270fb09d64"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Regimen Fiscal: De Consolidación]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
